@@ -32,7 +32,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -55,42 +54,7 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void display7SEG(int num)
-{
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6, 1);
-		switch(num) {
-		case 0:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5, 0);
-			break;
-		case 1:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1 | GPIO_PIN_2, 0);
-			break;
-		case 2:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_6, 0);
-			break;
-		case 3:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_6, 0);
-			break;
-		case 4:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 5:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 6:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 7:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2, 0);
-			break;
-		case 8:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 9:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		}
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -127,12 +91,23 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int counter = 0;
+
   while (1)
   {
-	if (counter >= 10) counter = 0;
-	display7SEG(counter++);
-	HAL_Delay(1000);
+	  for (int i=9; i>=0; i--)
+	  {
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9,1);
+		  if (i>=5) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0); //Red Vertical
+		  else if (i>=2 && i<5) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 0); //Green Vertical
+		  else HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0); //Yellow Vertical
+
+		  if (i>=7) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, 0); //Green Horizontal
+		  else if (i>=5 && i<7) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, 0); //Yellow Horizontal
+		  else HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, 0); //Red Horizontal
+		  HAL_Delay(250);
+	  }
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -32,7 +32,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define SEGMENT_A_PIN GPIO_PIN_0
+#define SEGMENT_B_PIN GPIO_PIN_1
+#define SEGMENT_C_PIN GPIO_PIN_2
+#define SEGMENT_D_PIN GPIO_PIN_3
+#define SEGMENT_E_PIN GPIO_PIN_4
+#define SEGMENT_F_PIN GPIO_PIN_5
+#define SEGMENT_G_PIN GPIO_PIN_6
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -57,39 +63,33 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN 0 */
 void display7SEG(int num)
 {
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6, 1);
-		switch(num) {
-		case 0:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5, 0);
-			break;
-		case 1:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1 | GPIO_PIN_2, 0);
-			break;
-		case 2:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_6, 0);
-			break;
-		case 3:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_6, 0);
-			break;
-		case 4:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 5:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 6:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 7:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2, 0);
-			break;
-		case 8:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		case 9:
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_5 | GPIO_PIN_6, 0);
-			break;
-		}
+    // Define configurations for each digit
+    // Assuming common cathode 7-segment display
+    const uint8_t digitConfigs[] = {
+        0b00111111, // Digit 0
+        0b00000110, // Digit 1
+        0b01011011, // Digit 2
+        0b01001111, // Digit 3
+        0b01100110, // Digit 4
+        0b01101101, // Digit 5
+        0b01111101, // Digit 6
+        0b00000111, // Digit 7
+        0b01111111, // Digit 8
+        0b01101111  // Digit 9
+    };
+    HAL_GPIO_WritePin(GPIOB, SEGMENT_A_PIN | SEGMENT_B_PIN | SEGMENT_C_PIN |
+                                     SEGMENT_D_PIN | SEGMENT_E_PIN | SEGMENT_F_PIN |
+                                     SEGMENT_G_PIN, 1); // Turn off segments
+
+    if (num >= 0 && num <= 9) {
+        HAL_GPIO_WritePin(GPIOB, SEGMENT_A_PIN | SEGMENT_B_PIN | SEGMENT_C_PIN |
+                                     SEGMENT_D_PIN | SEGMENT_E_PIN | SEGMENT_F_PIN |
+                                     SEGMENT_G_PIN,
+                          (GPIO_PinState)(digitConfigs[num] ^ 0xFF)); // Invert bits for common cathode
+        HAL_Delay(1000);
+    }
+
+
 }
 /* USER CODE END 0 */
 
