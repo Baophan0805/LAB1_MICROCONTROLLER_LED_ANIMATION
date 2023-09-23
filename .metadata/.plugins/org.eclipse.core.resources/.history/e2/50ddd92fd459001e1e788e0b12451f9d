@@ -96,11 +96,12 @@ int main(void)
   {
 	  for (int i=9; i>=0; i--)
 	  {
-		  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin | LED_YELLOW_Pin | LED_GREEN_Pin,1);
-		  if (i>=5) HAL_GPIO_WritePin(GPIOA, LED_RED_Pin,0);
-		  else if (i>=2 && i<5) HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin,0);
-		  else HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin,0);
+		  HAL_WritePin(GPIOA, LED_RED_Pin | LED_YELLOW_Pin | LED_GREEN_Pin,1);
+		  if (i>=5) HAL_WritePin(GPIOA, LED_RED_Pin,0);
+		  else if (i>=2 && i<5) HAL_WritePin(GPIOA, LED_GREEN_Pin,0);
+		  else HAL_WritePin(GPIOA, LED_YELLOW_Pin,0);
 		  HAL_Delay(250);
+
 	  }
 
 

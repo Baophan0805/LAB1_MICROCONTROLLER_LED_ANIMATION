@@ -91,18 +91,17 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  HAL_GPIO_WritePin(GPIOA,LED_RED_Pin, 0);
+  HAL_GPIO_WritePin(GPIOA,LED_YELLOW_Pin, 0);
+  HAL_GPIO_WritePin(GPIOA,LED_GREEN_Pin, 1);
   while (1)
   {
-	  for (int i=9; i>=0; i--)
-	  {
-		  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin | LED_YELLOW_Pin | LED_GREEN_Pin,1);
-		  if (i>=5) HAL_GPIO_WritePin(GPIOA, LED_RED_Pin,0);
-		  else if (i>=2 && i<5) HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin,0);
-		  else HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin,0);
-		  HAL_Delay(250);
-	  }
-
+	  HAL_GPIO_TogglePin(GPIOA, LED_RED_Pin | LED_YELLOW_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(GPIOA, LED_YELLOW_Pin | LED_GREEN_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(GPIOA, LED_GREEN_Pin | LED_RED_Pin);
+	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
