@@ -155,10 +155,8 @@ int main(void)
 		c_sec--;
 	}
 //	clearAllClock();
-//	for (int i=0;i<12;i++) {
-//		setNumberOnClock(i);
-//		HAL_Delay(250);
-//	}
+//	setNumberOnClock(2);
+	HAL_Delay(250);
 
     /* USER CODE END WHILE */
 

@@ -106,59 +106,59 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  clearAllClock();
-  while (1)
+//  clearAllClock();
+while (1)
   {
-	if (n_sec>=60)
-	{
-		n_sec = 0;
-		n_min++;
-		if (n_min >= 60)
-		{
-			n_min = 0;
-			clearNumberOnClock(n_hour);
-			n_hour++;
-			if (n_hour >= 12)
-			{
-				n_hour = 0;
-			}
-		}
-		if (c_sec <= 0)
-		{
-			n_sec++;
-			c_sec = 2;
-		}
-		if (n_sec % 5 == 0)
-		{
-			if (n_sec/5 == 0) clearNumberOnClock(11);
-			else clearNumberOnClock(n_sec/5 - 1);
-			setNumberOnClock(n_sec/5);
-
-		}
-		setNumberOnClock(n_hour);
-		if (c_blink_min <= 0)
-		{
-			switch (sw_min)
-			{
-			   case 0:
-				   setNumberOnClock(n_min/5);
-				   sw_min = 1;
-				   break;
-			   case 1:
-				   clearNumberOnClock(n_min /5);
-				   sw_min = 0;
-				   break;
-			}
-			c_blink_min = 10;
-		}
-		c_blink_min--;
-		c_sec--;
-	}
-//	clearAllClock();
-//	for (int i=0;i<12;i++) {
-//		setNumberOnClock(i);
-//		HAL_Delay(250);
+//	if (n_sec>=60)
+//	{
+//		n_sec = 0;
+//		n_min++;
+//		if (n_min >= 60)
+//		{
+//			n_min = 0;
+//			clearNumberOnClock(n_hour);
+//			n_hour++;
+//			if (n_hour >= 12)
+//			{
+//				n_hour = 0;
+//			}
+//		}
+//		if (c_sec <= 0)
+//		{
+//			n_sec++;
+//			c_sec = 2;
+//		}
+//		if (n_sec % 5 == 0)
+//		{
+//			if (n_sec/5 == 0) clearNumberOnClock(11);
+//			else clearNumberOnClock(n_sec/5 - 1);
+//			setNumberOnClock(n_sec/5);
+//
+//		}
+//		setNumberOnClock(n_hour);
+//		if (c_blink_min <= 0)
+//		{
+//			switch (sw_min)
+//			{
+//			   case 0:
+//				   setNumberOnClock(n_min/5);
+//				   sw_min = 1;
+//				   break;
+//			   case 1:
+//				   clearNumberOnClock(n_min /5);
+//				   sw_min = 0;
+//				   break;
+//			}
+//			c_blink_min = 10;
+//		}
+//		c_blink_min--;
+//		c_sec--;
 //	}
+	clearAllClock();
+	for (int i=0;i<12;i++) {
+		setNumberOnClock(i);
+		HAL_Delay(250);
+	}
 
     /* USER CODE END WHILE */
 
