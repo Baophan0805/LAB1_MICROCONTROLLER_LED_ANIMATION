@@ -430,3 +430,190 @@ Finished building: LAB1_Exercise.bin
  
  
  
+10:28:51 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:21: error: 'counter' undeclared (first use in this function)
+  161 |         display7SEG(counter++);
+      |                     ^~~~~~~
+../Core/Src/main.c:161:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:29:00 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4932	     20	   1572	   6524	   197c	LAB1_Exercise.elf
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+Finished building: LAB1_Exercise.list
+ 
+ 
+11:04:18 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:173:1: error: expected identifier or '(' before '}' token
+  173 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:04:57 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4660	     20	   1572	   6252	   186c	LAB1_Exercise.elf
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+Finished building: LAB1_Exercise.list
+ 
+ 
+11:05:44 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-size   LAB1_Exercise.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4660	     20	   1572	   6252	   186c	LAB1_Exercise.elf
+Finished building: default.size.stdout
+ 
+11:08:42 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4592	     20	   1572	   6184	   1828	LAB1_Exercise.elf
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+Finished building: LAB1_Exercise.list
+ 
+ 
+11:25:17 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4720	     20	   1572	   6312	   18a8	LAB1_Exercise.elf
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+Finished building: LAB1_Exercise.list
+ 
+ 
+11:28:44 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4724	     20	   1572	   6316	   18ac	LAB1_Exercise.elf
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+Finished building: LAB1_Exercise.list
+ 
+ 
+11:49:50 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-size   LAB1_Exercise.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4724	     20	   1572	   6316	   18ac	LAB1_Exercise.elf
+Finished building: default.size.stdout
+ 
+11:54:18 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:6: warning: implicit declaration of function 'display'; did you mean 'display7SEG'? [-Wimplicit-function-declaration]
+  110 |      display(i-2);
+      |      ^~~~~~~
+      |      display7SEG
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/ASUS/Documents/HocDH/HK5/Microprocessors/Lab/GIT_LAB1/LAB1_Exercise/Debug/../Core/Src/main.c:110: undefined reference to `display'
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: C:/Users/ASUS/Documents/HocDH/HK5/Microprocessors/Lab/GIT_LAB1/LAB1_Exercise/Debug/../Core/Src/main.c:115: undefined reference to `display'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: LAB1_Exercise.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:54:35 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4952	     20	   1572	   6544	   1990	LAB1_Exercise.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+Finished building: LAB1_Exercise.list
+ 
+ 
+12:02:19 **** Incremental Build of configuration Debug for project LAB1_Exercise ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB1_Exercise.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1_Exercise.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB1_Exercise.elf
+ 
+arm-none-eabi-size   LAB1_Exercise.elf 
+arm-none-eabi-objdump -h -S  LAB1_Exercise.elf  > "LAB1_Exercise.list"
+arm-none-eabi-objcopy  -O ihex  LAB1_Exercise.elf  "LAB1_Exercise.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4952	     20	   1572	   6544	   1990	LAB1_Exercise.elf
+arm-none-eabi-objcopy  -O binary  LAB1_Exercise.elf  "LAB1_Exercise.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LAB1_Exercise.hex
+Finished building: LAB1_Exercise.bin
+ 
+ 
+Finished building: LAB1_Exercise.list
+ 
