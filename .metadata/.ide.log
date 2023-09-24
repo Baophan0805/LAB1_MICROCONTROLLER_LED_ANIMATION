@@ -1223,3 +1223,39 @@
 2023-09-23 17:26:17,954 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2482mS.
 2023-09-23 17:26:17,956 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
 2023-09-23 17:26:17,958 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2023-09-23 18:01:20,643 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 903059408 Bytes (1073741824)
+2023-09-23 18:01:21,801 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 925509208 Bytes (1073741824)
+2023-09-23 18:01:21,992 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 944383576 Bytes (1073741824)
+2023-09-23 18:01:22,343 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2023-09-23 18:01:22,343 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2023-09-23 18:01:22,343 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2023-09-23 18:01:22,343 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2023-09-23 18:01:22,344 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.3.0.202107141111\\db\
+2023-09-23 18:01:22,596 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\MXTmpFiles\license.tmp_save
+2023-09-23 18:01:22,665 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\MXTmpFiles\license.tmp
+2023-09-23 18:01:22,695 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\MXTmpFiles\gpio.tmp_save
+2023-09-23 18:01:22,773 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\MXTmpFiles\gpio.tmp
+2023-09-23 18:01:22,827 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Src\stm32f1xx_it.c_save
+2023-09-23 18:01:22,911 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Src\stm32f1xx_it.c
+2023-09-23 18:01:22,916 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Inc\stm32f1xx_it.h_save
+2023-09-23 18:01:23,032 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Inc\stm32f1xx_it.h
+2023-09-23 18:01:23,052 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Src\stm32f1xx_hal_msp.c_save
+2023-09-23 18:01:23,172 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Src\stm32f1xx_hal_msp.c
+2023-09-23 18:01:23,176 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\MXTmpFiles\system.tmp_save
+2023-09-23 18:01:23,228 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\MXTmpFiles\system.tmp
+2023-09-23 18:01:23,245 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-09-23 18:01:23,328 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Inc\stm32f1xx_hal_conf.h
+2023-09-23 18:01:23,360 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Inc\main.h_save
+2023-09-23 18:01:23,425 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Inc\main.h
+2023-09-23 18:01:23,438 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Src\main.c_save
+2023-09-23 18:01:23,540 [INFO] CodeEngine:257 - Generated code: C:\Users\ASUS\Documents\HocDH\HK5\Microprocessors\Lab\GIT_LAB1\LAB1_Exercise\Core\Src\main.c
+2023-09-23 18:01:24,432 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 75mS.
+2023-09-23 18:01:24,436 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2023-09-23 18:01:24,885 [INFO] ConfigFileManager:1271 - The Die is : DIE412
+2023-09-23 18:01:27,193 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2757mS.
+2023-09-23 18:01:27,194 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
+2023-09-23 18:01:27,196 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2023-09-24 09:49:34,929 [INFO] Activator:177 - 
+
+
+2023-09-24 09:49:34,929 [INFO] Activator:178 - !SESSION log4j initialized
