@@ -99,9 +99,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int n_sec = 0;
-  int n_min = 0;
-  int n_hour = 0;
+  int n_sec = 15;
+  int n_min = 45;
+  int n_hour = 6;
   clearAllClock();
   while (1)
   {
@@ -121,7 +121,7 @@ int main(void)
 	setNumberOnClock(n_min/5);
 	setNumberOnClock(n_sec/5);
 	n_sec++;
-	HAL_Delay(10);
+	HAL_Delay(1000);
 
 //	clearAllClock();
 //	for (int i=0;i<12;i++) {
