@@ -62,13 +62,6 @@ void clearNumberOnClock(int num);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int n_sec = 0;
-int n_min = 0;
-int n_hour = 6;
-
-int c_sec = 2;
-int c_blink_min = 10;
-int sw_min = 0;
 
 /* USER CODE END 0 */
 
@@ -106,54 +99,30 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int n_sec = 15;
+  int n_min = 45;
+  int n_hour = 6;
   clearAllClock();
   while (1)
   {
-	if (n_sec>=60)
-	{
+	if (n_sec == 60) {
 		n_sec = 0;
 		n_min++;
-		if (n_min >= 60)
-		{
-			n_min = 0;
-			clearNumberOnClock(n_hour);
-			n_hour++;
-			if (n_hour >= 12)
-			{
-				n_hour = 0;
-			}
-		}
-		if (c_sec <= 0)
-		{
-			n_sec++;
-			c_sec = 2;
-		}
-		if (n_sec % 5 == 0)
-		{
-			if (n_sec/5 == 0) clearNumberOnClock(11);
-			else clearNumberOnClock(n_sec/5 - 1);
-			setNumberOnClock(n_sec/5);
-
-		}
-		setNumberOnClock(n_hour);
-		if (c_blink_min <= 0)
-		{
-			switch (sw_min)
-			{
-			   case 0:
-				   setNumberOnClock(n_min/5);
-				   sw_min = 1;
-				   break;
-			   case 1:
-				   clearNumberOnClock(n_min /5);
-				   sw_min = 0;
-				   break;
-			}
-			c_blink_min = 10;
-		}
-		c_blink_min--;
-		c_sec--;
 	}
+	else if (n_min == 60) {
+		n_min = 0;
+		n_hour++;
+	}
+	else if (n_hour == 12) {
+		n_hour = 0;
+	}
+	clearAllClock();
+	setNumberOnClock(n_hour);
+	setNumberOnClock(n_min/5);
+	setNumberOnClock(n_sec/5);
+	n_sec++;
+	HAL_Delay(1000);
+
 //	clearAllClock();
 //	for (int i=0;i<12;i++) {
 //		setNumberOnClock(i);
