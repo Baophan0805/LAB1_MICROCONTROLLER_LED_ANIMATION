@@ -122,13 +122,6 @@ int main(void)
 	setNumberOnClock(n_sec/5);
 	n_sec++;
 	HAL_Delay(10);
-
-//	clearAllClock();
-//	for (int i=0;i<12;i++) {
-//		setNumberOnClock(i);
-//		HAL_Delay(250);
-//	}
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
